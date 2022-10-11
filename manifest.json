@@ -1,0 +1,14 @@
+{
+    "name": "PG Extension",
+    "short_name": "PG-E",
+    "version": "1.0",
+    "description": "The K+ Password Generator to go!",
+    "icons": {
+        "48": "icons/logo48x48.png",
+        "128": "icons/logo128x128.png"
+    },
+    "browser_action": {
+        "default_popup": "popup/popup.html"
+    },
+    "manifest_version": 2
+}
