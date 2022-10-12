@@ -123,11 +123,9 @@ var forapp1;
 var notes1;
 var opname;
 document.getElementById("nextbutton").addEventListener('click', () => {
-	console.info("start");
 	if (nexvarooo == 3) {
 		notes1 = document.getElementById("inputt").value;
 		document.getElementById("inputt").value = "";
-		console.log("works");
 		downloadnow();
 		location.reload();
 	};
@@ -136,6 +134,7 @@ document.getElementById("nextbutton").addEventListener('click', () => {
 		document.getElementById("inputt").value = "";
 		nexvarooo = 3;
 		document.getElementById("textt").innerHTML = "Extra Notes:";
+		document.getElementById("nextbutton").innerHTML = "Download";
 	};
 	if (nexvaro == 1) {
 		opname = document.getElementById("inputt").value; //filename
@@ -143,7 +142,6 @@ document.getElementById("nextbutton").addEventListener('click', () => {
 		document.getElementById("textt").innerHTML = "For the Website/App:";
 	  nexvaro = 2;
 		nexvaroo = 2;
-		console.info("1");
 	};
 });
 //cancel
@@ -154,6 +152,7 @@ document.getElementById("cancelbtn").addEventListener('click', () => {
 	nexvarooo = 1;
 	document.getElementById("inputt").value = "";
 	document.getElementById("textt").innerHTML = "File name (optional):";
+	document.getElementById("nextbutton").innerHTML = "Next";
 	document.getElementById("dowop").style.display = "none";
 	event.preventDefault();
 });
@@ -170,9 +169,12 @@ clipboard.addEventListener('click', () =>{
     document.execCommand('copy');
     textarea.remove();
     document.getElementById('copybtn').innerHTML = 'Copied!';
-		document.getElementById("copybtn").style.color = "#EEFF00";
+		document.getElementById("copybtn").style.color = "#32e56f";
 		setTimeout(function(){
     document.getElementById('copybtn').innerHTML = 'Copy';
 		document.getElementById("copybtn").style.color = "#CBCBCB";
    	}, 3000)
 });
+//logo
+console.info("  _____   _____        ______ \n |  __  \ / ____|      |  ____|\n | |__) | |  __ ______| |__   \n |  ___/| | |_ |______|  __|  \n | |    | |__| |      | |____ \n |_|      \_____|      |______|\n                              "
+);

@@ -4,9 +4,9 @@
 }
 body {
   background: rgb(0,0,0);
-background: -moz-linear-gradient(68deg, rgba(0,0,0,1) 30%, rgba(0,255,119,1) 100%);
-background: -webkit-linear-gradient(68deg, rgba(0,0,0,1) 30%, rgba(0,255,119,1) 100%);
-background: linear-gradient(68deg, rgba(0,0,0,1) 30%, rgba(0,255,119,1) 100%);
+background: -moz-linear-gradient(68deg, rgba(0,0,0,1) 30%, rgb(208, 10, 252) 100%);
+background: -webkit-linear-gradient(68deg, rgba(0,0,0,1) 30%, rgb(208, 10, 252) 100%);
+background: linear-gradient(68deg, rgba(0,0,0,1) 30%, rgb(208, 10, 252) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00ff77",GradientType=1);
   min-width:540px;
   min-height:210px;
@@ -31,7 +31,6 @@ p {
   height: 35px;
   bottom: 0;
   width: 500px;
-  /* display: flex; */
   background-color: #00000000;
   text-align: center;
   align-items: center;
@@ -46,6 +45,11 @@ p {
   margin-top: 4px;
   font-family: arial;
   text-decoration: none;
+  -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
 }
 .bottom p {
   color: #CBCBCB;
@@ -53,10 +57,20 @@ p {
   margin: 0;
   padding: 0;
   font-size: 20px;
+  -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
 }
 .bottom img {
   float: left;
   margin-right: 20px;
+  -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
 }
 .setting {
 	display: none;
