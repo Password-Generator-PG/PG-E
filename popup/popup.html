@@ -15,7 +15,43 @@
 </div>
 </div>
 
+
+<div id="advanced" style="margin-top:-110px;">
+  <div class="settings">
+    <div class="settings1">
+  <div class="setting">
+    <label></label>
+    <input type="number" placeholder="20+ not recommended" id="length" min='4' max='20' value='20' />
+  </div>
+   <div class="setting">
+     <input type="checkbox" id="uppercase" class="regular-checkbox" checked>
+     <label for="uppercase"></label>
+     <h4>Uppercase</h4>
+   </div>
+  <div class="setting">
+    <input type="checkbox" id="lowercase" class="regular-checkbox" checked>
+    <label for="lowercase"></label>
+    <h4>Lowercase</h4>
+  </div>
+  </div>
+  <div class="settings2">
+  <div class="setting">
+    <input type="checkbox" id="numbers" class="regular-checkbox" checked>
+    <label for="numbers"></label>
+    <h4>Numbers</h4>
+  </div>
+  <div class="setting">
+    <input type="checkbox" id="symbols" class="regular-checkbox" checked>
+    <label for="symbols"></label>
+    <h4>Symbols</h4>
+  </div>
+  </div>
+    </div>
+</div>
+
+
     <div class="top">
+      <button type="button" id="advbtn">+</button>
       <p id="result"></p>
     </div>
     <div class="bottom">
@@ -24,26 +60,6 @@
       <p id="copybtn">Copy</p>
       <a href="https://password-generator.one" target="_blank">Password Generator ⇲</a>
     </div>
-		<div class="setting" style="display:none;">
-			<label></label>
-			<input type="number" id="length" min='4' max='20' value='20' />
-		</div>
-		<div class="setting" style="display:none;">
-			<label></label>
-			<input type="checkbox" id="uppercase" checked />
-		</div>
-		<div class="setting" style="display:none;">
-			<label></label>
-			<input type="checkbox" id="lowercase" checked />
-		</div>
-		<div class="setting" style="display:none;">
-			<label></label>
-			<input type="checkbox" id="numbers" checked />
-		</div>
-		<div class="setting" style="display:none;">
-			<label></label>
-			<input type="checkbox" id="symbols" checked />
-		</div>
     <script src="./script2.js"></script>
   </body>
 </html>

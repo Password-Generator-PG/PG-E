@@ -90,9 +90,13 @@ const textorhtml = document.getElementById("dowop");
 		event.preventDefault();
 		if (textorhtml.style.display === "none") {
 			textorhtml.style.display = "block";
+			advf.style.marginTop = "-110px";
+			document.getElementById("advbtn").style.transform = "rotate(0deg)";
 			event.preventDefault();
 		} else {
 			textorhtml.style.display = "none";
+			advf.style.marginTop = "-110px";
+			document.getElementById("advbtn").style.transform = "rotate(0deg)";
 			event.preventDefault();
 		}
 	});
@@ -176,5 +180,76 @@ clipboard.addEventListener('click', () =>{
    	}, 3000)
 });
 //logo
-console.info("  _____   _____        ______ \n |  __  \ / ____|      |  ____|\n | |__) | |  __ ______| |__   \n |  ___/| | |_ |______|  __|  \n | |    | |__| |      | |____ \n |_|      \_____|      |______|\n                              "
-);
+console.info("%c  _____   _____        ______ \n |  __  \ / ____|      |  ____|\n | |__) | |  __ ______| |__   \n |  ___/| | |_ |______|  __|  \n | |    | |__| |      | |____ \n |_|      \_____|      |______|\n                              "
+, "color: #c60af0");
+//advanced
+const advf = document.getElementById("advanced");
+document.getElementById("advbtn").addEventListener('click', () => {
+ event.preventDefault();
+	if (advf.style.marginTop === '-110px') {
+		document.getElementById("advbtn").classList.add("rotatew");
+		advf.classList.add("animad");
+		setTimeout(function(){
+		advf.classList.remove("animad");
+		advf.style.marginTop = "0";
+	}, 499);
+	setTimeout(function(){
+	document.getElementById("advbtn").classList.remove("rotatew");
+	document.getElementById("advbtn").style.transform = "rotate(45deg)";
+}, 299);
+		event.preventDefault();
+	} else {
+		document.getElementById("advbtn").classList.add("rotatew2");
+		advf.classList.add("animad2");
+		setTimeout(function(){
+		advf.classList.remove("animad2");
+		advf.style.marginTop = "-110px";
+	}, 499);
+	setTimeout(function(){
+	document.getElementById("advbtn").classList.remove("rotatew2");
+	document.getElementById("advbtn").style.transform = "rotate(0deg)";
+}, 299);
+		event.preventDefault();
+	}
+});
+//checkbox
+document.getElementById("uppercase").addEventListener('change', () => {
+	const length = +lengthEl.value;
+	const hasLower = lowercaseEl.checked;
+	const hasUpper = uppercaseEl.checked;
+	const hasNumber = numbersEl.checked;
+	const hasSymbol = symbolsEl.checked;
+	resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+});
+document.getElementById("lowercase").addEventListener('change', () => {
+	const length = +lengthEl.value;
+	const hasLower = lowercaseEl.checked;
+	const hasUpper = uppercaseEl.checked;
+	const hasNumber = numbersEl.checked;
+	const hasSymbol = symbolsEl.checked;
+	resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+});
+document.getElementById("numbers").addEventListener('change', () => {
+	const length = +lengthEl.value;
+	const hasLower = lowercaseEl.checked;
+	const hasUpper = uppercaseEl.checked;
+	const hasNumber = numbersEl.checked;
+	const hasSymbol = symbolsEl.checked;
+	resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+});
+document.getElementById("symbols").addEventListener('change', () => {
+	const length = +lengthEl.value;
+	const hasLower = lowercaseEl.checked;
+	const hasUpper = uppercaseEl.checked;
+	const hasNumber = numbersEl.checked;
+	const hasSymbol = symbolsEl.checked;
+	resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+});
+document.getElementById("length").addEventListener('change', () => {
+	const length = +lengthEl.value;
+	const hasLower = lowercaseEl.checked;
+	const hasUpper = uppercaseEl.checked;
+	const hasNumber = numbersEl.checked;
+	const hasSymbol = symbolsEl.checked;
+	resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+});
