@@ -236,6 +236,12 @@ background-color: rgba(56, 0, 68, 0.4);
 		backdrop-filter: blur(2rem);
 		-webkit-backdrop-filter: blur(2rem);
 }
+h4 {
+  -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
 .animad {
       animation: openadvani 0.5s ease-in-out 0s 1 normal none;
 }
@@ -339,7 +345,7 @@ h4 {
   margin-left: 10px;
   margin-top: 5px;
 }
-/* slide */
+/* checkbox */
 
 label {
 	display: inline;
@@ -385,4 +391,4 @@ label {
 }
 
 
-/* end .slideThree */
+/* end checkbox */

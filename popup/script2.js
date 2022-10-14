@@ -22,7 +22,17 @@ generate.addEventListener('click', () => {
 	const hasNumber = numbersEl.checked;
 	const hasSymbol = symbolsEl.checked;
 
-	resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+	if (lengthEl.value > 20) {
+		document.getElementById('result').innerHTML = 'PASSWORD TOO LONG';
+		document.getElementById("result").style.color = "#ffff69";
+		const length = +20;
+		setTimeout(function(){
+    resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+		document.getElementById("result").style.color = "#fff";
+   	}, 3000)
+	} else {
+		resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+	}
 });
 
 const length = +lengthEl.value;
@@ -107,7 +117,7 @@ function downloadnow(){
 	}else {
 		const forapp = "For: " + forapp1;
 		const notes = "Note: " + notes1;
-		const text = "Keep it Safe! This file is ONLY on your hard drive and should never leave it! \n------------------------------------------ \n" + forapp + "\nYour password: " + resultEl.innerText + "\n" + notes + "\n  _____   _____        ______ \n |  __  \ / ____|      |  ____|\n | |__) | |  __ ______| |__   \n |  ___/| | |_ |______|  __|  \n | |    | |__| |      | |____ \n |_|      \_____|      |______|\n                              \nCreated in PG-E.\nProvided by K+. \nAll rights reserved.";
+		const text = "Keep it Safe! This file is ONLY on your hard drive and should never leave it! \n------------------------------------------ \n" + forapp + "\nYour password: " + resultEl.innerText + "\n" + notes + "\n------------------------------------------\n  _____   _____        ______ \n |  __  \ / ____|      |  ____|\n | |__) | |  __ ______| |__   \n |  ___/| | |_ |______|  __|  \n | |    | |__| |      | |____ \n |_|       \_____|      |______|\n                              \n------------------------------------------\nCreated in PG-E.\nProvided by K+. \nAll rights reserved.";
 	 if (opname == "") {
 	 	const filename = Math.floor(Math.random() * 1000000000) + 1 + "-PG" + ".txt";
 		download(filename, text);
@@ -251,5 +261,15 @@ document.getElementById("length").addEventListener('change', () => {
 	const hasUpper = uppercaseEl.checked;
 	const hasNumber = numbersEl.checked;
 	const hasSymbol = symbolsEl.checked;
-	resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+	if (lengthEl.value > 20) {
+		document.getElementById('result').innerHTML = 'PASSWORD TOO LONG';
+		document.getElementById("result").style.color = "#ffff69";
+		const length = +20;
+		setTimeout(function(){
+    resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+		document.getElementById("result").style.color = "#fff";
+   	}, 3000)
+	} else {
+		resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+	}
 });
